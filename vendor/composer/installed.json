@@ -110,17 +110,17 @@
     },
     {
         "name": "anax/anax-ramverk1-me",
-        "version": "v1.0.6",
-        "version_normalized": "1.0.6.0",
+        "version": "v1.0.7",
+        "version_normalized": "1.0.7.0",
         "source": {
             "type": "git",
             "url": "https://github.com/canax/anax-ramverk1-me.git",
-            "reference": "3732750465241af220c98930fe8bb1d0ace31e7f"
+            "reference": "06f47e5de9be2e07f3d9a1d2e166b9610c745d6c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/canax/anax-ramverk1-me/zipball/3732750465241af220c98930fe8bb1d0ace31e7f",
-            "reference": "3732750465241af220c98930fe8bb1d0ace31e7f",
+            "url": "https://api.github.com/repos/canax/anax-ramverk1-me/zipball/06f47e5de9be2e07f3d9a1d2e166b9610c745d6c",
+            "reference": "06f47e5de9be2e07f3d9a1d2e166b9610c745d6c",
             "shasum": ""
         },
         "require": {
@@ -133,7 +133,7 @@
         "require-dev": {
             "phpunit/phpunit": "^7"
         },
-        "time": "2018-11-05T23:50:25+00:00",
+        "time": "2018-11-12T16:13:27+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -209,17 +209,17 @@
     },
     {
         "name": "anax/commons",
-        "version": "v2.0.0-beta.11",
-        "version_normalized": "2.0.0.0-beta11",
+        "version": "v2.0.0-beta.13",
+        "version_normalized": "2.0.0.0-beta13",
         "source": {
             "type": "git",
             "url": "https://github.com/canax/commons.git",
-            "reference": "27c7e98bf0e96ec3880ba486e55d9de46b3ac0ac"
+            "reference": "e0795f353337cc5c1d876e02916244900f764be5"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/canax/commons/zipball/27c7e98bf0e96ec3880ba486e55d9de46b3ac0ac",
-            "reference": "27c7e98bf0e96ec3880ba486e55d9de46b3ac0ac",
+            "url": "https://api.github.com/repos/canax/commons/zipball/e0795f353337cc5c1d876e02916244900f764be5",
+            "reference": "e0795f353337cc5c1d876e02916244900f764be5",
             "shasum": ""
         },
         "require": {
@@ -229,7 +229,7 @@
             "anax/di": "^2.0.0@alpha",
             "phpunit/phpunit": "^7"
         },
-        "time": "2018-11-05T13:04:57+00:00",
+        "time": "2018-11-20T16:16:37+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -308,17 +308,17 @@
     },
     {
         "name": "anax/content",
-        "version": "v2.0.0-beta.4",
-        "version_normalized": "2.0.0.0-beta4",
+        "version": "v2.0.0-beta.5",
+        "version_normalized": "2.0.0.0-beta5",
         "source": {
             "type": "git",
             "url": "https://github.com/canax/content.git",
-            "reference": "183e2b41cad299fe7217ea9605fa507fd36beafe"
+            "reference": "3b90aab003cea1b38eb16f4a4cb4b33412a19130"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/canax/content/zipball/183e2b41cad299fe7217ea9605fa507fd36beafe",
-            "reference": "183e2b41cad299fe7217ea9605fa507fd36beafe",
+            "url": "https://api.github.com/repos/canax/content/zipball/3b90aab003cea1b38eb16f4a4cb4b33412a19130",
+            "reference": "3b90aab003cea1b38eb16f4a4cb4b33412a19130",
             "shasum": ""
         },
         "require": {
@@ -331,7 +331,7 @@
             "anax/di": "^2.0.0@alpha",
             "phpunit/phpunit": "^7"
         },
-        "time": "2018-11-02T12:21:18+00:00",
+        "time": "2018-12-03T20:41:04+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -361,17 +361,17 @@
     },
     {
         "name": "anax/controller",
-        "version": "v2.0.0-beta.7",
-        "version_normalized": "2.0.0.0-beta7",
+        "version": "v2.0.0-beta.8",
+        "version_normalized": "2.0.0.0-beta8",
         "source": {
             "type": "git",
             "url": "https://github.com/canax/controller.git",
-            "reference": "47f2a56deb3bba9648260e77f9e10c4c181412bc"
+            "reference": "d9176b86622bd6b92d181ed5d4f86fd4d80587f9"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/canax/controller/zipball/47f2a56deb3bba9648260e77f9e10c4c181412bc",
-            "reference": "47f2a56deb3bba9648260e77f9e10c4c181412bc",
+            "url": "https://api.github.com/repos/canax/controller/zipball/d9176b86622bd6b92d181ed5d4f86fd4d80587f9",
+            "reference": "d9176b86622bd6b92d181ed5d4f86fd4d80587f9",
             "shasum": ""
         },
         "require": {
@@ -385,7 +385,7 @@
             "anax/view": "^2.0.0@alpha",
             "phpunit/phpunit": "^7"
         },
-        "time": "2018-11-05T14:09:50+00:00",
+        "time": "2018-12-03T20:44:28+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -463,17 +463,17 @@
     },
     {
         "name": "anax/di",
-        "version": "v2.0.0-beta.1",
-        "version_normalized": "2.0.0.0-beta1",
+        "version": "v2.0.4",
+        "version_normalized": "2.0.4.0",
         "source": {
             "type": "git",
             "url": "https://github.com/canax/di.git",
-            "reference": "0d37fa94073fc4bfad41d63cfaa0e787202c26e5"
+            "reference": "64ea8749a3f5b53e7fcbb6be0b365734face7623"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/canax/di/zipball/0d37fa94073fc4bfad41d63cfaa0e787202c26e5",
-            "reference": "0d37fa94073fc4bfad41d63cfaa0e787202c26e5",
+            "url": "https://api.github.com/repos/canax/di/zipball/64ea8749a3f5b53e7fcbb6be0b365734face7623",
+            "reference": "64ea8749a3f5b53e7fcbb6be0b365734face7623",
             "shasum": ""
         },
         "require": {
@@ -483,7 +483,7 @@
         "require-dev": {
             "phpunit/phpunit": "^7"
         },
-        "time": "2018-08-15T15:01:48+00:00",
+        "time": "2018-11-16T11:07:00+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -501,7 +501,7 @@
                 "email": "mos@dbwebb.se"
             }
         ],
-        "description": "Anax DI module, dependency injection (PHP FIG PSR-11).",
+        "description": "Anax DI module, dependency injection (PHP-FIG PSR-11).",
         "homepage": "https://dbwebb.se/anax",
         "keywords": [
             "boilerplate",
@@ -568,17 +568,17 @@
     },
     {
         "name": "anax/request",
-        "version": "v2.0.0-beta.2",
-        "version_normalized": "2.0.0.0-beta2",
+        "version": "v2.0.0-beta.3",
+        "version_normalized": "2.0.0.0-beta3",
         "source": {
             "type": "git",
             "url": "https://github.com/canax/request.git",
-            "reference": "7e948a7a220ceaa4755d069b96a7c640ed104bd0"
+            "reference": "3183885838343ff6f7f9f93d8709233d914ef5c1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/canax/request/zipball/7e948a7a220ceaa4755d069b96a7c640ed104bd0",
-            "reference": "7e948a7a220ceaa4755d069b96a7c640ed104bd0",
+            "url": "https://api.github.com/repos/canax/request/zipball/3183885838343ff6f7f9f93d8709233d914ef5c1",
+            "reference": "3183885838343ff6f7f9f93d8709233d914ef5c1",
             "shasum": ""
         },
         "require": {
@@ -587,7 +587,7 @@
         "require-dev": {
             "phpunit/phpunit": "^7"
         },
-        "time": "2018-10-23T10:22:30+00:00",
+        "time": "2018-11-23T22:19:30+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -669,17 +669,17 @@
     },
     {
         "name": "anax/router",
-        "version": "v2.0.0-beta.6",
-        "version_normalized": "2.0.0.0-beta6",
+        "version": "v2.0.0-beta.9",
+        "version_normalized": "2.0.0.0-beta9",
         "source": {
             "type": "git",
             "url": "https://github.com/canax/router.git",
-            "reference": "244128e54ee5537f0e71ed99e440fa21fa2db624"
+            "reference": "4cc5754fd9cd8fd2fa4cf264b3df68df62e67df9"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/canax/router/zipball/244128e54ee5537f0e71ed99e440fa21fa2db624",
-            "reference": "244128e54ee5537f0e71ed99e440fa21fa2db624",
+            "url": "https://api.github.com/repos/canax/router/zipball/4cc5754fd9cd8fd2fa4cf264b3df68df62e67df9",
+            "reference": "4cc5754fd9cd8fd2fa4cf264b3df68df62e67df9",
             "shasum": ""
         },
         "require": {
@@ -692,7 +692,7 @@
             "anax/di": "^2.0.0@alpha",
             "phpunit/phpunit": "^7"
         },
-        "time": "2018-09-25T18:11:07+00:00",
+        "time": "2018-11-23T22:24:26+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -887,17 +887,17 @@
     },
     {
         "name": "anax/view",
-        "version": "v2.0.0-beta.12",
-        "version_normalized": "2.0.0.0-beta12",
+        "version": "v2.0.0-beta.13",
+        "version_normalized": "2.0.0.0-beta13",
         "source": {
             "type": "git",
             "url": "https://github.com/canax/view.git",
-            "reference": "4d76c23aa1c7ce138dada2853f1b1f704d196c05"
+            "reference": "8242e6be1465609b2f289225ff368d999933a900"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/canax/view/zipball/4d76c23aa1c7ce138dada2853f1b1f704d196c05",
-            "reference": "4d76c23aa1c7ce138dada2853f1b1f704d196c05",
+            "url": "https://api.github.com/repos/canax/view/zipball/8242e6be1465609b2f289225ff368d999933a900",
+            "reference": "8242e6be1465609b2f289225ff368d999933a900",
             "shasum": ""
         },
         "require": {
@@ -909,7 +909,7 @@
             "anax/di": "^2.0.0@alpha",
             "phpunit/phpunit": "^7"
         },
-        "time": "2018-11-05T14:11:53+00:00",
+        "time": "2018-12-03T20:55:10+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -1041,6 +1041,41 @@
         "keywords": [
             "html"
         ]
+    },
+    {
+        "name": "mahm/weather",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/mahm17/ramverk1-module.git",
+            "reference": "c5e784f620c61c62641f5e753280300dcbe5b85a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/mahm17/ramverk1-module/zipball/c5e784f620c61c62641f5e753280300dcbe5b85a",
+            "reference": "c5e784f620c61c62641f5e753280300dcbe5b85a",
+            "shasum": ""
+        },
+        "require": {
+            "anax/anax-ramverk1-me": "^1.0.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^7"
+        },
+        "time": "2018-12-06T10:32:18+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Anax\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "A me page for the ramverk1 course."
     },
     {
         "name": "michelf/php-markdown",
@@ -1847,17 +1882,17 @@
     },
     {
         "name": "phpunit/phpunit",
-        "version": "7.4.3",
-        "version_normalized": "7.4.3.0",
+        "version": "7.4.5",
+        "version_normalized": "7.4.5.0",
         "source": {
             "type": "git",
             "url": "https://github.com/sebastianbergmann/phpunit.git",
-            "reference": "c151651fb6ed264038d486ea262e243af72e5e64"
+            "reference": "61d34e8dd6eb3555900f0f2a2fa9e7e570730102"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c151651fb6ed264038d486ea262e243af72e5e64",
-            "reference": "c151651fb6ed264038d486ea262e243af72e5e64",
+            "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/61d34e8dd6eb3555900f0f2a2fa9e7e570730102",
+            "reference": "61d34e8dd6eb3555900f0f2a2fa9e7e570730102",
             "shasum": ""
         },
         "require": {
@@ -1878,7 +1913,7 @@
             "phpunit/php-timer": "^2.0",
             "sebastian/comparator": "^3.0",
             "sebastian/diff": "^3.0",
-            "sebastian/environment": "^3.1 || ^4.0",
+            "sebastian/environment": "^4.0",
             "sebastian/exporter": "^3.1",
             "sebastian/global-state": "^2.0",
             "sebastian/object-enumerator": "^3.0.3",
@@ -1896,7 +1931,7 @@
             "ext-xdebug": "*",
             "phpunit/php-invoker": "^2.0"
         },
-        "time": "2018-10-23T05:57:41+00:00",
+        "time": "2018-12-03T05:01:24+00:00",
         "bin": [
             "phpunit"
         ],
@@ -2034,24 +2069,28 @@
     },
     {
         "name": "scrivo/highlight.php",
-        "version": "v9.12.0.5",
-        "version_normalized": "9.12.0.5",
+        "version": "v9.13.1.0",
+        "version_normalized": "9.13.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/scrivo/highlight.php.git",
-            "reference": "0db45267df6b3bbae224ff86445d6407629e8b96"
+            "reference": "e453ed4bb1a7602efb334c07579be885a4ee8abb"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/scrivo/highlight.php/zipball/0db45267df6b3bbae224ff86445d6407629e8b96",
-            "reference": "0db45267df6b3bbae224ff86445d6407629e8b96",
+            "url": "https://api.github.com/repos/scrivo/highlight.php/zipball/e453ed4bb1a7602efb334c07579be885a4ee8abb",
+            "reference": "e453ed4bb1a7602efb334c07579be885a4ee8abb",
             "shasum": ""
+        },
+        "require": {
+            "ext-json": "*",
+            "ext-mbstring": "*"
         },
         "require-dev": {
             "phpunit/phpunit": "^4.8",
             "symfony/finder": "^2.8"
         },
-        "time": "2018-08-24T15:45:27+00:00",
+        "time": "2018-11-23T02:08:01+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -2080,7 +2119,7 @@
                 "role": "Contributor"
             }
         ],
-        "description": "Server side syntax highlighter that supports 176 languages. It's a PHP port of highlight.js",
+        "description": "Server side syntax highlighter that supports 185 languages. It's a PHP port of highlight.js",
         "keywords": [
             "code",
             "highlight",
@@ -2262,30 +2301,30 @@
     },
     {
         "name": "sebastian/environment",
-        "version": "3.1.0",
-        "version_normalized": "3.1.0.0",
+        "version": "4.0.1",
+        "version_normalized": "4.0.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/sebastianbergmann/environment.git",
-            "reference": "cd0871b3975fb7fc44d11314fd1ee20925fce4f5"
+            "reference": "febd209a219cea7b56ad799b30ebbea34b71eb8f"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/cd0871b3975fb7fc44d11314fd1ee20925fce4f5",
-            "reference": "cd0871b3975fb7fc44d11314fd1ee20925fce4f5",
+            "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/febd209a219cea7b56ad799b30ebbea34b71eb8f",
+            "reference": "febd209a219cea7b56ad799b30ebbea34b71eb8f",
             "shasum": ""
         },
         "require": {
-            "php": "^7.0"
+            "php": "^7.1"
         },
         "require-dev": {
-            "phpunit/phpunit": "^6.1"
+            "phpunit/phpunit": "^7.4"
         },
-        "time": "2017-07-01T08:51:00+00:00",
+        "time": "2018-11-25T09:31:21+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "3.1.x-dev"
+                "dev-master": "4.0-dev"
             }
         },
         "installation-source": "dist",
@@ -2736,17 +2775,17 @@
     },
     {
         "name": "symfony/yaml",
-        "version": "v3.4.18",
-        "version_normalized": "3.4.18.0",
+        "version": "v3.4.19",
+        "version_normalized": "3.4.19.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/yaml.git",
-            "reference": "640b6c27fed4066d64b64d5903a86043f4a4de7f"
+            "reference": "291e13d808bec481eab83f301f7bff3e699ef603"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/yaml/zipball/640b6c27fed4066d64b64d5903a86043f4a4de7f",
-            "reference": "640b6c27fed4066d64b64d5903a86043f4a4de7f",
+            "url": "https://api.github.com/repos/symfony/yaml/zipball/291e13d808bec481eab83f301f7bff3e699ef603",
+            "reference": "291e13d808bec481eab83f301f7bff3e699ef603",
             "shasum": ""
         },
         "require": {
@@ -2762,7 +2801,7 @@
         "suggest": {
             "symfony/console": "For validating YAML files using the lint command"
         },
-        "time": "2018-10-02T16:33:53+00:00",
+        "time": "2018-11-11T19:48:54+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {

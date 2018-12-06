@@ -378,15 +378,7 @@ class Request
         return $this->post;
     }
 
-    public function setPost($key, $value = null)
-    {
-        if (is_array($key)) {
-            $this->post = array_merge($this->post, $key);
-        } else {
-            $this->post[$key] = $value;
-        }
-        return $this;
-    }
+
 
     /**
      * Set the request body (useful for unit testing).
@@ -410,5 +402,24 @@ class Request
         return isset($this->body)
             ? $this->body
             : file_get_contents("php://input");
+    }
+
+
+
+    /**
+     * Get the request body from the HTTP request and treat it as
+     * JSON data.
+     *
+     * @throws Anax\Request\Exception when request body is invalid JSON.
+     *
+     * @return mixed as the JSON converted content.
+     */
+    public function getBodyAsJson()
+    {
+        $entry = json_decode($this->getBody(), true);
+        if (is_null($entry)) {
+            throw new Exception("Could not read HTTP request body as JSON.");
+        }
+        return $entry;
     }
 }

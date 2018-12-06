@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e48d1adfff1e986f4d98671ada3cb33a",
+    "content-hash": "4ec6db1f9d3a80531e9ebbd044a12b41",
     "packages": [
         {
             "name": "anax/anax-flat",
@@ -303,16 +303,16 @@
         },
         {
             "name": "anax/content",
-            "version": "v2.0.0-beta.4",
+            "version": "v2.0.0-beta.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/canax/content.git",
-                "reference": "183e2b41cad299fe7217ea9605fa507fd36beafe"
+                "reference": "3b90aab003cea1b38eb16f4a4cb4b33412a19130"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/canax/content/zipball/183e2b41cad299fe7217ea9605fa507fd36beafe",
-                "reference": "183e2b41cad299fe7217ea9605fa507fd36beafe",
+                "url": "https://api.github.com/repos/canax/content/zipball/3b90aab003cea1b38eb16f4a4cb4b33412a19130",
+                "reference": "3b90aab003cea1b38eb16f4a4cb4b33412a19130",
                 "shasum": ""
             },
             "require": {
@@ -350,20 +350,20 @@
                 "micro",
                 "mvc"
             ],
-            "time": "2018-11-02T12:21:18+00:00"
+            "time": "2018-12-03T20:41:04+00:00"
         },
         {
             "name": "anax/controller",
-            "version": "v2.0.0-beta.7",
+            "version": "v2.0.0-beta.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/canax/controller.git",
-                "reference": "47f2a56deb3bba9648260e77f9e10c4c181412bc"
+                "reference": "d9176b86622bd6b92d181ed5d4f86fd4d80587f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/canax/controller/zipball/47f2a56deb3bba9648260e77f9e10c4c181412bc",
-                "reference": "47f2a56deb3bba9648260e77f9e10c4c181412bc",
+                "url": "https://api.github.com/repos/canax/controller/zipball/d9176b86622bd6b92d181ed5d4f86fd4d80587f9",
+                "reference": "d9176b86622bd6b92d181ed5d4f86fd4d80587f9",
                 "shasum": ""
             },
             "require": {
@@ -402,7 +402,7 @@
                 "micro",
                 "mvc"
             ],
-            "time": "2018-11-05T14:09:50+00:00"
+            "time": "2018-12-03T20:44:28+00:00"
         },
         {
             "name": "anax/database",
@@ -860,16 +860,16 @@
         },
         {
             "name": "anax/view",
-            "version": "v2.0.0-beta.12",
+            "version": "v2.0.0-beta.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/canax/view.git",
-                "reference": "4d76c23aa1c7ce138dada2853f1b1f704d196c05"
+                "reference": "8242e6be1465609b2f289225ff368d999933a900"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/canax/view/zipball/4d76c23aa1c7ce138dada2853f1b1f704d196c05",
-                "reference": "4d76c23aa1c7ce138dada2853f1b1f704d196c05",
+                "url": "https://api.github.com/repos/canax/view/zipball/8242e6be1465609b2f289225ff368d999933a900",
+                "reference": "8242e6be1465609b2f289225ff368d999933a900",
                 "shasum": ""
             },
             "require": {
@@ -906,7 +906,7 @@
                 "anax",
                 "template"
             ],
-            "time": "2018-11-05T14:11:53+00:00"
+            "time": "2018-12-03T20:55:10+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -954,6 +954,39 @@
                 "html"
             ],
             "time": "2018-02-23T01:58:20+00:00"
+        },
+        {
+            "name": "mahm/weather",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mahm17/ramverk1-module.git",
+                "reference": "c5e784f620c61c62641f5e753280300dcbe5b85a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mahm17/ramverk1-module/zipball/c5e784f620c61c62641f5e753280300dcbe5b85a",
+                "reference": "c5e784f620c61c62641f5e753280300dcbe5b85a",
+                "shasum": ""
+            },
+            "require": {
+                "anax/anax-ramverk1-me": "^1.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Anax\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A me page for the ramverk1 course.",
+            "time": "2018-12-06T10:32:18+00:00"
         },
         {
             "name": "michelf/php-markdown",
