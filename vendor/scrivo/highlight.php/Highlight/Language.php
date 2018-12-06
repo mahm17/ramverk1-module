@@ -35,7 +35,6 @@ namespace Highlight;
 
 class Language
 {
-    public $disableAutodetect = false;
     public $caseInsensitive = false;
     public $aliases = null;
 
@@ -60,7 +59,6 @@ class Language
             "returnBegin" => "",
             "end" => "",
             "endRe" => "",
-            "endSameAsBegin" => "",
             "endsParent" => "",
             "endsWithParent" => "",
             "excludeEnd" => "",
@@ -105,7 +103,6 @@ class Language
         $this->aliases = isset($this->mode->aliases) ? $this->mode->aliases : null;
 
         $this->caseInsensitive = isset($this->mode->case_insensitive) ? $this->mode->case_insensitive : false;
-        $this->disableAutodetect = isset($this->mode->disableAutodetect) ? $this->mode->disableAutodetect : false;
     }
 
     private function langRe($value, $global = false)
@@ -190,7 +187,7 @@ class Language
         $mode->keywords = $mode->keywords ? $mode->keywords : $mode->beginKeywords;
 
         /* Note: JsonRef method creates different references as those in the
-         * original source files. Two modes may refer to the same keywords
+         * original source files. Two modes may refer to the same keywors
          * set, so only testing if the mode has keywords is not enough: the
          * mode's keywords might be compiled already, so it is necessary
          * to do an 'is_array' check.
@@ -220,9 +217,6 @@ class Language
                 $mode->begin = "\B|\b";
             }
             $mode->beginRe = $this->langRe($mode->begin);
-            if ($mode->endSameAsBegin) {
-                $mode->end = $mode->begin;
-            }
             if (!$mode->end && !$mode->endsWithParent) {
                 $mode->end = "\B|\b";
             }

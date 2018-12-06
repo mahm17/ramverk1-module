@@ -135,22 +135,10 @@ class Highlighter
         return count($match) && ($match[0][1] == 0);
     }
 
-    private function escapeRe($value)
-    {
-        return sprintf('/%s/m', preg_quote($value));
-    }
-
     private function subMode($lexeme, $mode)
     {
         for ($i = 0; $i < count($mode->contains); ++$i) {
             if ($this->testRe($mode->contains[$i]->beginRe, $lexeme)) {
-                if ($mode->contains[$i]->endSameAsBegin) {
-                    $matches = array();
-                    preg_match($mode->contains[$i]->beginRe, $lexeme, $matches);
-
-                    $mode->contains[$i]->endRe = $this->escapeRe($matches[0]);
-                }
-
                 return $mode->contains[$i];
             }
         }
@@ -335,15 +323,12 @@ class Highlighter
                 if ($this->top->className) {
                     $this->result .= self::SPAN_END_TAG;
                 }
-                if (!$this->top->skip && !$this->top->subLanguage) {
+                if (!$this->top->skip) {
                     $this->relevance += $this->top->relevance;
                 }
                 $this->top = $this->top->parent;
             } while ($this->top != $end_mode->parent);
             if ($end_mode->starts) {
-                if ($end_mode->endSameAsBegin) {
-                    $end_mode->starts->endRe = $end_mode->endRe;
-                }
                 $this->startNewMode($end_mode->starts, "");
             }
 
@@ -452,18 +437,6 @@ class Highlighter
     }
 
     /**
-     * Determine whether or not a language definition supports auto detection.
-     *
-     * @param string $name Language name
-     *
-     * @return bool
-     */
-    private function autoDetection($name)
-    {
-        return !$this->getLanguage($name)->disableAutodetect;
-    }
-
-    /**
      * Core highlighting function. Accepts a language name, or an alias, and a
      * string with the code to highlight. Returns an object with the following
      * properties:
@@ -564,11 +537,6 @@ class Highlighter
         foreach ($tmp as $l) {
             // don't fail if we run into a non-existent language
             try {
-                // skip any languages that don't support auto detection
-                if (!$this->autoDetection($l)) {
-                    continue;
-                }
-
                 $current = $this->highlight($l, $code, false);
             } catch (\DomainException $e) {
                 continue;

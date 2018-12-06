@@ -11,14 +11,4 @@ class MockHandlerControllerCatchAll
     {
         return "catchAll";
     }
-
-    public function catchAllPost(...$args)
-    {
-        return "catchAllPost";
-    }
-
-    public function catchAllPut(...$args)
-    {
-        return "catchAllPut";
-    }
 }

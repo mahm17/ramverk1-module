@@ -11,7 +11,7 @@ install:
   - composer install --no-interaction --no-progress
 
 script:
-  - composer test
+  - vendor/bin/phpunit -v
 
 notifications:
   email: false

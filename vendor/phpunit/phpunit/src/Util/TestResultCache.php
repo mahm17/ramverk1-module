@@ -77,15 +77,6 @@ class TestResultCache implements \Serializable, TestResultCacheInterface
             return;
         }
 
-        if (!$this->createDirectory(\dirname($this->cacheFilename))) {
-            throw new Exception(
-                \sprintf(
-                    'Cannot create directory "%s" for result cache file',
-                    $this->cacheFilename
-                )
-            );
-        }
-
         \file_put_contents(
             $this->cacheFilename,
             \serialize($this)
@@ -184,10 +175,5 @@ class TestResultCache implements \Serializable, TestResultCacheInterface
                 }
             }
         }
-    }
-
-    private function createDirectory(string $directory): bool
-    {
-        return !(!\is_dir($directory) && !@\mkdir($directory, 0777, true) && !\is_dir($directory));
     }
 }
