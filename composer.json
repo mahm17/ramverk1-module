@@ -1,5 +1,5 @@
 {
-    "name": "mahm/module",
+    "name": "anax/module",
     "description": "Module for weather api",
     "license": "MIT",
     "minimum-stability": "beta",
