@@ -2,6 +2,40 @@ Revision history
 =================================
 
 
+
+v2.1.3 (2018-12-07)
+---------------------------------
+
+* Adding setting "emulate_prepares" => false, to the default config file.
+
+
+
+v2.1.2 (2018-12-07)
+---------------------------------
+
+* Remove composer.lock.
+
+
+
+v2.1.1 (2018-12-07)
+---------------------------------
+
+* Remove Sensiolabs validation from README.
+* Set PHP-restrictions in composer to >=7.2, not ^7.2.
+
+
+
+v2.1.0 (2018-12-07)
+---------------------------------
+
+* Remove Database::fetchObject() marked as obsolete, replaced by fetchClass().
+* Remove Database::fetchOne() marked as obsolete, replaced by fetch().
+* Added typehints to Database.
+* Added typehints to DatabaseDebug.
+* Enhance unit testing.
+
+
+
 v2.0.1 (2018-11-02)
 ---------------------------------
 

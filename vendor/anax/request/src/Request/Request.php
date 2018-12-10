@@ -378,6 +378,24 @@ class Request
         return $this->post;
     }
 
+    /**
+     * Set variable in the post array.
+     *
+     * @param mixed  $key   the key an the , or an key-value array
+     * @param string $value the value of the key
+     *
+     * @return self
+     */
+    public function setPost($key, $value = null)
+    {
+        if (is_array($key)) {
+            $this->post = array_merge($this->post, $key);
+        } else {
+            $this->post[$key] = $value;
+        }
+        return $this;
+    }
+
 
 
     /**

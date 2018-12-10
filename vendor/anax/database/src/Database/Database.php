@@ -26,7 +26,7 @@ class Database
      *
      * @param array $options containing details for connecting to the database.
      */
-    public function __construct($options = [])
+    public function __construct(array $options = [])
     {
         $this->setOptions($options);
     }
@@ -40,7 +40,7 @@ class Database
      *
      * @return void
      */
-    public function setOptions($options = [])
+    public function setOptions(array $options = []) : void
     {
         $default = [
             "dsn"             => null,
@@ -51,23 +51,24 @@ class Database
             "fetch_mode"      => \PDO::FETCH_OBJ,
             "emulate_prepares" => false,
             "session_key"     => "Anax\Database",
-            "verbose"         => null,
+            "verbose"         => false,
             "debug_connect"   => false,
         ];
+
         $this->options = array_merge($default, $options);
     }
 
 
 
     /**
-     * Set a single option.
+     * Set a single option for configuration and connection details.
      *
      * @param string $option which to set.
      * @param mixed  $value  to set.
      *
      * @return self
      */
-    public function setOption($option, $value)
+    public function setOption(string $option, $value) : object
     {
         $this->options[$option] = $value;
         return $this;
@@ -83,28 +84,27 @@ class Database
      *
      * @return self
      */
-    public function connect()
+    public function connect() : object
     {
         if ($this->pdo) {
             return $this;
         }
 
-        if (!isset($this->options['dsn'])) {
+        if (!isset($this->options["dsn"])) {
             throw new Exception("You can not connect, missing dsn.");
         }
 
         try {
             $this->pdo = new \PDO(
-                $this->options['dsn'],
-                $this->options['username'],
-                $this->options['password'],
-                $this->options['driver_options']
+                $this->options["dsn"],
+                $this->options["username"],
+                $this->options["password"],
+                $this->options["driver_options"]
             );
-
             $this->pdo->setAttribute(\PDO::ATTR_DEFAULT_FETCH_MODE, $this->options['fetch_mode']);
             $this->pdo->setAttribute(\PDO::ATTR_EMULATE_PREPARES, $this->options['emulate_prepares']);
         } catch (\PDOException $e) {
-            if ($this->options['debug_connect']) {
+            if ($this->options["debug_connect"]) {
                 throw $e;
             }
             throw new Exception("Could not connect to database, hiding connection details.");
@@ -124,21 +124,21 @@ class Database
      *
      * @return array with query and params.
      */
-    private function expandParamArray($query, $params)
+    private function expandParamArray(string $query, array $params) : array
     {
         $param = [];
         $offset = -1;
 
         foreach ($params as $val) {
-            $offset = strpos($query, '?', $offset + 1);
+            $offset = strpos($query, "?", $offset + 1);
 
             if (is_array($val)) {
                 $nrOfItems = count($val);
 
                 if ($nrOfItems) {
                     $query = substr($query, 0, $offset)
-                        . str_repeat('?,', $nrOfItems  - 1)
-                        . '?'
+                        . str_repeat("?,", $nrOfItems  - 1)
+                        . "?"
                         . substr($query, $offset + 1);
                     $param = array_merge($param, $val);
                 } else {
@@ -162,7 +162,7 @@ class Database
      *
      * @return mixed with resultset
      */
-    public function executeFetchAll($query, $params = [])
+    public function executeFetchAll(string $query, array $params = [])
     {
         $this->execute($query, $params);
         return $this->stmt->fetchAll();
@@ -179,7 +179,7 @@ class Database
      *
      * @return mixed with resultset
      */
-    public function executeFetch($query, $params = [])
+    public function executeFetch(string $query, array $params = [])
     {
         $this->execute($query, $params);
         return $this->stmt->fetch();
@@ -197,8 +197,11 @@ class Database
      *
      * @return object with resultset
      */
-    public function executeFetchClass($query, $params, $class)
-    {
+    public function executeFetchClass(
+        string $query,
+        array $params,
+        string $class
+    ) : object {
         $this->execute($query, $params);
         $this->stmt->setFetchMode(\PDO::FETCH_CLASS, $class);
         return $this->stmt->fetch();
@@ -216,8 +219,11 @@ class Database
      *
      * @return object with resultset
      */
-    public function executeFetchInto($query, $params, $object = null)
-    {
+    public function executeFetchInto(
+        string $query,
+        array $params,
+        string $object = null
+    ) : object {
         if (is_null($object)) {
             $object = $params;
             $params = [];
@@ -230,11 +236,11 @@ class Database
 
 
     /**
-     * Fetch all resultset.
+     * Fetch all rows into the resultset.
      *
      * @return array with resultset.
      */
-    public function fetchAll()
+    public function fetchAll() : array
     {
         return $this->stmt->fetchAll();
     }
@@ -242,7 +248,7 @@ class Database
 
 
     /**
-     * Fetch one resultset.
+     * Fetch one row as the resultset.
      *
      * @return mixed with resultset.
      */
@@ -258,9 +264,9 @@ class Database
      *
      * @param string $classname which type of object to instantiate.
      *
-     * @return object with resultset.
+     * @return object containing resultset as properties.
      */
-    public function fetchClass($classname)
+    public function fetchClass(string $classname) : object
     {
         $this->stmt->setFetchMode(\PDO::FETCH_CLASS, $classname);
         return $this->stmt->fetch();
@@ -269,13 +275,14 @@ class Database
 
 
     /**
-     * Fetch full resultset as new objects from this class.
+     * Fetch all rows as the resultset instantiated as new objects from
+     * this class.
      *
      * @param string $classname which type of object to instantiate.
      *
-     * @return array with resultset.
+     * @return array with resultset containing objects of $classname.
      */
-    public function fetchAllClass($classname)
+    public function fetchAllClass(string $classname) : array
     {
         $this->stmt->setFetchMode(\PDO::FETCH_CLASS, $classname);
         return $this->stmt->fetchAll();
@@ -290,7 +297,7 @@ class Database
      *
      * @return array with resultset.
      */
-    public function fetchInto($object)
+    public function fetchInto(object $object) : object
     {
         $this->stmt->setFetchMode(\PDO::FETCH_INTO, $object);
         return $this->stmt->fetch();
@@ -308,7 +315,7 @@ class Database
      *
      * @return self
      */
-    public function execute($query, $params = [])
+    public function execute(string $query, array $params = []) : object
     {
         list($query, $params) = $this->expandParamArray($query, $params);
 
@@ -337,30 +344,30 @@ class Database
 
 
     /**
-     * Throw exception using detailed message.
+     * Throw exception with detailed message.
      *
-     * @param string       $msg     detailed error message from PDO
-     * @param string       $query   query to execute
-     * @param array        $param   to match ? in statement
+     * @param string $msg    detailed error message from PDO
+     * @param string $query  query to execute
+     * @param array  $params to match ? in statement
+     *
+     * @throws Anax\Database\Exception
      *
      * @return void
-     *
-     * @throws \Anax\Database\Exception
      */
-    protected function createException($msg, $query, $param)
-    {
+    protected function createException(
+        string $msg,
+        string $query,
+        array $params
+    ) : void {
         throw new Exception(
             $msg
             . "<br><br>SQL ("
             . substr_count($query, "?")
             . " params):<br><pre>$query</pre><br>PARAMS ("
-            . count($param)
+            . count($params)
             . "):<br><pre>"
-            . implode($param, "\n")
+            . implode($params, "\n")
             . "</pre>"
-            . ((count(array_filter(array_keys($param), 'is_string')) > 0)
-                ? "WARNING your params array has keys, should only have values."
-                : null)
         );
     }
 
@@ -369,16 +376,14 @@ class Database
     /**
      * Throw exception when pdo failed using detailed message.
      *
-     * @param string       $query   query to execute
-     * @param array        $param   to match ? in statement
-     *
-     * @throws \Anax\Database\Exception
+     * @param string $query  query to execute
+     * @param array  $params to match ? in statement
      *
      * @return void
      */
-    protected function pdoException($query, $param)
+    protected function pdoException(string $query, array $params) : void
     {
-        $this->createException($this->pdo->errorInfo()[2], $query, $param);
+        $this->createException($this->pdo->errorInfo()[2], $query, $params);
     }
 
 
@@ -386,16 +391,14 @@ class Database
     /**
      * Throw exception when statement failed using detailed message.
      *
-     * @param string       $query   query to execute
-     * @param array        $param   to match ? in statement
-     *
-     * @throws \Anax\Database\Exception
+     * @param string $query  query to execute
+     * @param array  $params to match ? in statement
      *
      * @return void
      */
-    protected function statementException($query, $param)
+    protected function statementException(string $query, array $params) : void
     {
-        $this->createException($this->stmt->errorInfo()[2], $query, $param);
+        $this->createException($this->stmt->errorInfo()[2], $query, $params);
     }
 
 
@@ -405,7 +408,7 @@ class Database
      *
      * @return integer as last insert id.
      */
-    public function lastInsertId()
+    public function lastInsertId() : int
     {
         return $this->pdo->lastInsertId();
     }
@@ -417,35 +420,8 @@ class Database
     *
     * @return integer as rows affected on last statement
     */
-    public function rowCount()
+    public function rowCount() : int
     {
         return $this->stmt->rowCount();
-    }
-
-
-
-    /**
-     * Fetch one resultset as an object from this class.
-     * OBSOLETE replaced by fetchClass
-     *
-     * @param string $classname which type of object to instantiate.
-     *
-     * @return object with resultset.
-     */
-    public function fetchObject($classname)
-    {
-        return $this->stmt->fetchObject($classname);
-    }
-
-
-
-    /**
-     * Fetch one resultset. OBSOLETE replace by fetch()
-     *
-     * @return mixed with resultset.
-     */
-    public function fetchOne()
-    {
-        return $this->stmt->fetch();
     }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1543851667">
-  <project timestamp="1543851667">
+<coverage generated="1544434521">
+  <project timestamp="1544434521">
     <package name="Anax\Models">
       <file name="C:\Users\Markus\dbwebb-kurser\ramverk1\me\module\src\Model\CurlWrapModel.php">
         <class name="Anax\Models\CurlWrapModel" namespace="Anax\Models">
