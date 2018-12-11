@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f8e0d4d98dbe4d7951cc6a19970c4fd2",
+    "content-hash": "7ec884c492123abdf640d080fbf399e5",
     "packages": [
         {
             "name": "anax/anax-flat",
@@ -406,16 +406,16 @@
         },
         {
             "name": "anax/database",
-            "version": "v2.1.3",
+            "version": "v2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/canax/database.git",
-                "reference": "6d108edc2a5cafa4591707dd138aa64fe198c84a"
+                "reference": "ea78a5b3eee8998be0e5a401247b9455ff240fb4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/canax/database/zipball/6d108edc2a5cafa4591707dd138aa64fe198c84a",
-                "reference": "6d108edc2a5cafa4591707dd138aa64fe198c84a",
+                "url": "https://api.github.com/repos/canax/database/zipball/ea78a5b3eee8998be0e5a401247b9455ff240fb4",
+                "reference": "ea78a5b3eee8998be0e5a401247b9455ff240fb4",
                 "shasum": ""
             },
             "require": {
@@ -447,7 +447,7 @@
                 "database",
                 "dba"
             ],
-            "time": "2018-12-07T09:43:09+00:00"
+            "time": "2018-12-10T17:33:21+00:00"
         },
         {
             "name": "anax/di",
