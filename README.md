@@ -1,6 +1,5 @@
 # ramverk1-module
-https://travis-ci.org/mahm17/ramverk1-module.svg?branch=master
-Detta är ett repo för ramverk1 modulen
+[![Build Status](https://travis-ci.org/mahm17/ramverk1-module.svg?branch=master)](https://travis-ci.org/mahm17/ramverk1-module)
 
 Installera modulen
 --------------------
