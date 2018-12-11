@@ -3,6 +3,7 @@
 [![Code Coverage](https://scrutinizer-ci.com/g/mahm17/ramverk1-module/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/mahm17/ramverk1-module/?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mahm17/ramverk1-module/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mahm17/ramverk1-module/?branch=master)
 [![Code Intelligence Status](https://scrutinizer-ci.com/g/mahm17/ramverk1-module/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
+[![Build Status](https://scrutinizer-ci.com/g/mahm17/ramverk1-module/badges/build.png?b=master)](https://scrutinizer-ci.com/g/mahm17/ramverk1-module/build-status/master)
 
 Installera modulen
 --------------------
